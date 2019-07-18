@@ -1,4 +1,4 @@
-package com.thoughtworks.parking_lot;
+package com.thoughtworks.parking_lot.mockTest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thoughtworks.parking_lot.controller.ParkingLotController;
@@ -40,6 +40,7 @@ public class ParkingLotControllerTest {
         ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
 
         when(parkingLotService.save(ArgumentMatchers.any())).thenReturn(parkingLot);
+
         mvc.perform(post("/parkinglots")
                 .accept(MediaType.APPLICATION_JSON_UTF8)
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
