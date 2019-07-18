@@ -14,11 +14,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Arrays;
+
+import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
+import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -33,7 +36,7 @@ public class ParkingLotControllerTest {
     private ParkingLotService parkingLotService;
 
     @Test
-    void should_save_parking_lot() throws Exception{
+    void should_save_parking_lot() throws Exception {
         ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
 
         when(parkingLotService.save(ArgumentMatchers.any())).thenReturn(parkingLot);
@@ -42,15 +45,26 @@ public class ParkingLotControllerTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(parkingLot)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.name",is("P001")));
+                .andExpect(jsonPath("$.name", is("P001")));
     }
 
     @Test
-    void should_delte_parking_lot_given_parking_lot_name() throws Exception{
+    void should_delte_parking_lot_given_parking_lot_name() throws Exception {
         ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
 
         mvc.perform(delete("/parkinglots/P001"))
                 .andExpect(status().isOk());
         verify(parkingLotService).deleteByName("P001");
+    }
+
+    @Test
+    void should_list_parking_lots() throws Exception {
+        ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
+
+        when(parkingLotService.list()).thenReturn(Arrays.asList(parkingLot, parkingLot, parkingLot));
+
+        mvc.perform(get("/parkinglots"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(3)));
     }
 }

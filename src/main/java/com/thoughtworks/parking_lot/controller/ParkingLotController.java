@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class ParkingLotController {
 
@@ -19,7 +21,12 @@ public class ParkingLotController {
     }
 
     @DeleteMapping("/parkinglots/{name}")
-    public void deleteByName(@PathVariable String name){
+    public void deleteByName(@PathVariable String name) {
         parkingLotService.deleteByName(name);
+    }
+
+    @GetMapping("/parkinglots")
+    public ResponseEntity<List<ParkingLot>> list() {
+        return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.list());
     }
 }

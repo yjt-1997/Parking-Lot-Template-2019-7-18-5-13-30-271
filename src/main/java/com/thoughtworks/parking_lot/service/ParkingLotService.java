@@ -3,6 +3,8 @@ package com.thoughtworks.parking_lot.service;
 import com.thoughtworks.parking_lot.entity.ParkingLot;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ParkingLotService {
 
@@ -12,5 +14,9 @@ public class ParkingLotService {
 
     public void deleteByName(String name) {
 
+    }
+
+    public List<ParkingLot> list() {
+        return null;
     }
 }
