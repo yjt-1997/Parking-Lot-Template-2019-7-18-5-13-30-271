@@ -6,10 +6,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.data.domain.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @ExtendWith(SpringExtension.class)
@@ -25,7 +28,37 @@ public class ParkingLotControllerTest {
 
         parkingLotRepository.save(parkingLot);
         ParkingLot fetchLot = parkingLotRepository.findAllByName("TestSave").get(0);
-        
+
         assertNotNull(fetchLot);
+    }
+
+    @Test
+    void should_delete_parking_lot() {
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.setName("TestSave");
+
+        parkingLotRepository.save(parkingLot);
+        ParkingLot fetchLot = parkingLotRepository.findAllByName("TestSave").get(0);
+        parkingLotRepository.delete(fetchLot);
+        List<ParkingLot> after = parkingLotRepository.findAllByName("TestSave");
+        ParkingLot afterDeleteLot = after.size() > 0 ? after.get(0) : null;
+
+        assertNotNull(fetchLot);
+        assertNull(afterDeleteLot);
+    }
+
+    @Test
+    void should_list_parking_lots() {
+        ParkingLot parkingLot1 = new ParkingLot("P001", 100, "香洲区");
+        ParkingLot parkingLot2 = new ParkingLot("P002", 100, "香洲区");
+        ParkingLot parkingLot3 = new ParkingLot("P003", 100, "香洲区");
+        ParkingLot parkingLot4 = new ParkingLot("P004", 100, "香洲区");
+
+        parkingLotRepository.saveAll(Arrays.asList(parkingLot1, parkingLot2, parkingLot3, parkingLot4));
+        Pageable page = PageRequest.of(1, 15);
+        Page<ParkingLot> fetchLots = parkingLotRepository.findAll(page);
+
+        assertNotNull(fetchLots);
+        assertEquals(fetchLots.getTotalElements(), 4);
     }
 }
