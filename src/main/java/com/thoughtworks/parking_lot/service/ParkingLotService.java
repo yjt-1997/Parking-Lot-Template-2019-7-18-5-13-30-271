@@ -9,4 +9,8 @@ public class ParkingLotService {
     public ParkingLot save(ParkingLot parkingLot) {
         return null;
     }
+
+    public void deleteByName(String name) {
+
+    }
 }

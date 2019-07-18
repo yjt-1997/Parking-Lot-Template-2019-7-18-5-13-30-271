@@ -15,7 +15,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -41,5 +43,14 @@ public class ParkingLotControllerTest {
                 .content(new ObjectMapper().writeValueAsString(parkingLot)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.name",is("P001")));
+    }
+
+    @Test
+    void should_delte_parking_lot_given_parking_lot_name() throws Exception{
+        ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
+
+        mvc.perform(delete("/parkinglots/P001"))
+                .andExpect(status().isOk());
+        verify(parkingLotService).deleteByName("P001");
     }
 }
