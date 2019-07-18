@@ -4275,3 +4275,270 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2019-07-18 19:41:37.908  INFO 6940 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@7530ad9c testClass = ParkingLotControllerTest, testInstance = com.thoughtworks.parking_lot.repositoryTest.ParkingLotControllerTest@445b295b, testMethod = should_list_parking_lots@ParkingLotControllerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@58a9760d testClass = ParkingLotControllerTest, locations = '{}', classes = '{class com.thoughtworks.parking_lot.ParkingLotApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@6f96c77, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e386720a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@13e39c73, [ImportsContextCustomizer@71e9ddb4 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72f926e6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27ce24aa, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
 2019-07-18 19:41:37.912  INFO 6940 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@e70f13a: startup date [Thu Jul 18 19:41:34 CST 2019]; root of context hierarchy
 2019-07-18 19:41:37.914  INFO 6940 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-18 19:49:34.865 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'configurationProperties' with highest search precedence
+2019-07-18 19:49:34.893 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-07-18 19:49:34.893 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-07-18 19:49:34.894 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-07-18 19:49:34.894 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-07-18 19:49:34.894 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-07-18 19:49:34.941  INFO 4848 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on DESKTOP-BE9JN0S with PID 4848 (E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271\out\production\classes started by Hasee in E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271)
+2019-07-18 19:49:34.942  INFO 4848 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 19:49:34.972  INFO 4848 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c6648b0: startup date [Thu Jul 18 19:49:34 CST 2019]; root of context hierarchy
+2019-07-18 19:49:35.934 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-07-18 19:49:36.081  INFO 4848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8403d7cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-18 19:49:36.360  INFO 4848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-07-18 19:49:36.378  INFO 4848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 19:49:36.378  INFO 4848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-18 19:49:36.382  INFO 4848 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;E:\Tools\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\Tools\NodeJs\;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;;E:\Tools\IntelliJ IDEA 2019.1.3\bin;;C:\Users\Hasee\AppData\Roaming\npm;E:\Tools\Microsoft VS Code\bin;.]
+2019-07-18 19:49:36.474  INFO 4848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 19:49:36.474 DEBUG 4848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 19:49:36.474  INFO 4848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1502 ms
+2019-07-18 19:49:37.014  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-18 19:49:37.015  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2/*]
+2019-07-18 19:49:37.018  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-18 19:49:37.018  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-18 19:49:37.018  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-18 19:49:37.018  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-18 19:49:37.019  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-18 19:49:37.019  INFO 4848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-18 19:49:37.037 DEBUG 4848 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-07-18 19:49:37.055  WARN 4848 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:49:37.055  WARN 4848 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:49:37.056  WARN 4848 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:49:37.056  WARN 4848 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:49:37.056  WARN 4848 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:49:37.124  INFO 4848 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-07-18 19:49:37.127  INFO 4848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-18 19:49:37.204  INFO 4848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-18 19:49:37.207  INFO 4848 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:file:./h2/oocl-agile-fs (H2 1.4)
+2019-07-18 19:49:37.265  INFO 4848 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2019-07-18 19:49:37.272  INFO 4848 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2019-07-18 19:49:37.288  INFO 4848 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2019-07-18 19:49:37.289  INFO 4848 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - Create Parking Lot
+2019-07-18 19:49:37.300  INFO 4848 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2 - Create Parking Order
+2019-07-18 19:49:37.310  INFO 4848 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.039s)
+2019-07-18 19:49:37.388  INFO 4848 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-07-18 19:49:37.929  WARN 4848 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [order_status] in table [parking_order]; found [smallint (Types#SMALLINT)], but expecting [boolean (Types#BOOLEAN)]
+2019-07-18 19:49:37.930  INFO 4848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-18 19:49:37.932  INFO 4848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-18 19:49:37.934  INFO 4848 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 19:49:37.944  INFO 4848 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 19:49:37.958 ERROR 4848 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [order_status] in table [parking_order]; found [smallint (Types#SMALLINT)], but expecting [boolean (Types#BOOLEAN)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [order_status] in table [parking_order]; found [smallint (Types#SMALLINT)], but expecting [boolean (Types#BOOLEAN)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [order_status] in table [parking_order]; found [smallint (Types#SMALLINT)], but expecting [boolean (Types#BOOLEAN)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 20 common frames omitted
+
+2019-07-18 19:50:13.377 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'configurationProperties' with highest search precedence
+2019-07-18 19:50:13.415 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-07-18 19:50:13.416 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-07-18 19:50:13.416 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-07-18 19:50:13.416 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-07-18 19:50:13.416 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-07-18 19:50:13.465  INFO 1596 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on DESKTOP-BE9JN0S with PID 1596 (E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271\out\production\classes started by Hasee in E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271)
+2019-07-18 19:50:13.466  INFO 1596 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 19:50:13.508  INFO 1596 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a4fb17b: startup date [Thu Jul 18 19:50:13 CST 2019]; root of context hierarchy
+2019-07-18 19:50:14.374 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-07-18 19:50:14.485  INFO 1596 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2bc3ef9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-18 19:50:14.698  INFO 1596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-07-18 19:50:14.712  INFO 1596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 19:50:14.712  INFO 1596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-18 19:50:14.715  INFO 1596 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;E:\Tools\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\Tools\NodeJs\;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;;E:\Tools\IntelliJ IDEA 2019.1.3\bin;;C:\Users\Hasee\AppData\Roaming\npm;E:\Tools\Microsoft VS Code\bin;.]
+2019-07-18 19:50:14.803  INFO 1596 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 19:50:14.803 DEBUG 1596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 19:50:14.804  INFO 1596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1295 ms
+2019-07-18 19:50:15.308  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-18 19:50:15.309  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2/*]
+2019-07-18 19:50:15.311  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-18 19:50:15.312  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-18 19:50:15.312  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-18 19:50:15.312  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-18 19:50:15.312  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-18 19:50:15.312  INFO 1596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-18 19:50:15.328 DEBUG 1596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-07-18 19:50:15.345  WARN 1596 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:50:15.345  WARN 1596 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:50:15.346  WARN 1596 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:50:15.346  WARN 1596 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:50:15.346  WARN 1596 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:50:15.365  INFO 1596 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-07-18 19:50:15.367  INFO 1596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-18 19:50:15.499  INFO 1596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-18 19:50:15.502  INFO 1596 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:file:./h2/oocl-agile-fs (H2 1.4)
+2019-07-18 19:50:15.562  WARN 1596 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Validate failed: Migration checksum mismatch for migration version 2
+-> Applied to database : -1812452787
+-> Resolved locally    : -2047159787
+2019-07-18 19:50:15.562  INFO 1596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-18 19:50:15.566  INFO 1596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-18 19:50:15.568  INFO 1596 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 19:50:15.579  INFO 1596 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 19:50:15.588 ERROR 1596 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Validate failed: Migration checksum mismatch for migration version 2
+-> Applied to database : -1812452787
+-> Resolved locally    : -2047159787
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: org.flywaydb.core.api.FlywayException: Validate failed: Migration checksum mismatch for migration version 2
+-> Applied to database : -1812452787
+-> Resolved locally    : -2047159787
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:1482) ~[flyway-core-5.2.4.jar:na]
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:85) ~[flyway-core-5.2.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1364) ~[flyway-core-5.2.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 18 common frames omitted
+
+2019-07-18 19:51:30.548 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'configurationProperties' with highest search precedence
+2019-07-18 19:51:30.589 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-07-18 19:51:30.589 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-07-18 19:51:30.590 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-07-18 19:51:30.590 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-07-18 19:51:30.590 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-07-18 19:51:30.639  INFO 7276 --- [main] c.t.parking_lot.ParkingLotApplication    : Starting ParkingLotApplication on DESKTOP-BE9JN0S with PID 7276 (E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271\out\production\classes started by Hasee in E:\Tools\Git\project\JavaProject\Parking-Lot-Template-2019-7-18-5-13-30-271)
+2019-07-18 19:51:30.640  INFO 7276 --- [main] c.t.parking_lot.ParkingLotApplication    : No active profile set, falling back to default profiles: default
+2019-07-18 19:51:30.679  INFO 7276 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a4fb17b: startup date [Thu Jul 18 19:51:30 CST 2019]; root of context hierarchy
+2019-07-18 19:51:31.559 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-07-18 19:51:31.672  INFO 7276 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8403d7cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-18 19:51:31.881  INFO 7276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-07-18 19:51:31.895  INFO 7276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-18 19:51:31.895  INFO 7276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-18 19:51:31.898  INFO 7276 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;E:\Tools\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\Tools\NodeJs\;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;;E:\Tools\IntelliJ IDEA 2019.1.3\bin;;C:\Users\Hasee\AppData\Roaming\npm;E:\Tools\Microsoft VS Code\bin;.]
+2019-07-18 19:51:32.000  INFO 7276 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-18 19:51:32.000 DEBUG 7276 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-07-18 19:51:32.000  INFO 7276 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1321 ms
+2019-07-18 19:51:32.522  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-18 19:51:32.524  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2/*]
+2019-07-18 19:51:32.526  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-18 19:51:32.526  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-18 19:51:32.526  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-18 19:51:32.526  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-18 19:51:32.527  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2019-07-18 19:51:32.527  INFO 7276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-07-18 19:51:32.543 DEBUG 7276 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-07-18 19:51:32.562  WARN 7276 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:51:32.562  WARN 7276 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:51:32.563  WARN 7276 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:51:32.563  WARN 7276 --- [main] org.flywaydb.core.Flyway                 : Direct configuration retrieval from the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.getConfiguration() instead.
+2019-07-18 19:51:32.563  WARN 7276 --- [main] org.flywaydb.core.Flyway                 : Direct configuration of the Flyway object has been deprecated and will be removed in Flyway 6.0. Use Flyway.configure() instead.
+2019-07-18 19:51:32.581  INFO 7276 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-07-18 19:51:32.583  INFO 7276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-18 19:51:32.730  INFO 7276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-18 19:51:32.733  INFO 7276 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:file:./h2/oocl-agile-fs (H2 1.4)
+2019-07-18 19:51:32.789  INFO 7276 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2019-07-18 19:51:32.796  INFO 7276 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2019-07-18 19:51:32.813  INFO 7276 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2019-07-18 19:51:32.814  INFO 7276 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - Create Parking Lot
+2019-07-18 19:51:32.825  INFO 7276 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2 - Create Parking Order
+2019-07-18 19:51:32.833  INFO 7276 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.038s)
+2019-07-18 19:51:32.902  INFO 7276 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-07-18 19:51:33.412  WARN 7276 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing sequence [hibernate_sequence]
+2019-07-18 19:51:33.413  INFO 7276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-18 19:51:33.415  INFO 7276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-18 19:51:33.418  INFO 7276 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-18 19:51:33.428  INFO 7276 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-18 19:51:33.436 ERROR 7276 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing sequence [hibernate_sequence]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.thoughtworks.parking_lot.ParkingLotApplication.main(ParkingLotApplication.java:10) [classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing sequence [hibernate_sequence]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing sequence [hibernate_sequence]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateSequence(AbstractSchemaValidator.java:184) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:100) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 20 common frames omitted
+

@@ -4,5 +4,5 @@ create table `parking_order`(
     `car_number` varchar(255),
     `create_time` bigint,
     `end_time` bigint,
-    `order_status` smallint
+    `order_status` boolean
 )

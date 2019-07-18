@@ -1,8 +1,7 @@
 package com.thoughtworks.parking_lot.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "parking_lot")
@@ -13,6 +12,9 @@ public class ParkingLot {
 
     private int capacity;
     private String address;
+    @OneToMany
+    @JoinColumn(name = "parking_lot_name", referencedColumnName = "name")
+    private List<ParkingOrder> parkingOrders;
 
     public ParkingLot() {
     }
@@ -45,5 +47,13 @@ public class ParkingLot {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<ParkingOrder> getParkingOrders() {
+        return parkingOrders;
+    }
+
+    public void setParkingOrders(List<ParkingOrder> parkingOrders) {
+        this.parkingOrders = parkingOrders;
     }
 }
