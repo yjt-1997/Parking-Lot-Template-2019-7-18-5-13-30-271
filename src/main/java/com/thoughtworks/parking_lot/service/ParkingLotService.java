@@ -19,4 +19,8 @@ public class ParkingLotService {
     public List<ParkingLot> list() {
         return null;
     }
+
+    public ParkingLot findByName(String name) {
+        return null;
+    }
 }

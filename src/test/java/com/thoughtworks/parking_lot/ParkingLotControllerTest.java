@@ -19,6 +19,7 @@ import java.util.Arrays;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.ArgumentMatchers.anyList;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -66,5 +67,16 @@ public class ParkingLotControllerTest {
         mvc.perform(get("/parkinglots"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)));
+    }
+
+    @Test
+    void should_return_parking_lots_given_parking_lot_name() throws Exception {
+        ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
+
+        when(parkingLotService.findByName(anyString())).thenReturn(parkingLot);
+
+        mvc.perform(get("/parkinglots/P001"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name", is("P001")));
     }
 }

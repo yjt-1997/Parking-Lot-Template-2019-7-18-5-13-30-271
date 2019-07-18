@@ -29,4 +29,9 @@ public class ParkingLotController {
     public ResponseEntity<List<ParkingLot>> list() {
         return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.list());
     }
+
+    @GetMapping("/parkinglots/{name}")
+    public ResponseEntity<ParkingLot> findByName(@PathVariable String name) {
+        return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.findByName(name));
+    }
 }
