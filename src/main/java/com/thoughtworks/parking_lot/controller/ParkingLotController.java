@@ -34,4 +34,9 @@ public class ParkingLotController {
     public ResponseEntity<ParkingLot> findByName(@PathVariable String name) {
         return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.findByName(name));
     }
+
+    @PutMapping("/parkinglots")
+    public ResponseEntity<ParkingLot> update(@RequestBody ParkingLot parkingLot) {
+        return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.update(parkingLot));
+    }
 }

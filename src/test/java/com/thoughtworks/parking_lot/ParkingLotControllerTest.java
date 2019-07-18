@@ -79,4 +79,18 @@ public class ParkingLotControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("P001")));
     }
+
+    @Test
+    void should_return_parking_lots_update_parking_lot() throws Exception {
+        ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
+
+        when(parkingLotService.update(ArgumentMatchers.any())).thenReturn(parkingLot);
+
+        mvc.perform(put("/parkinglots")
+                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .content(new ObjectMapper().writeValueAsString(parkingLot)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name", is("P001")));
+    }
 }

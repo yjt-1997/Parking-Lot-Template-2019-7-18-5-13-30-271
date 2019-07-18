@@ -23,4 +23,8 @@ public class ParkingLotService {
     public ParkingLot findByName(String name) {
         return null;
     }
+
+    public ParkingLot update(ParkingLot parkingLot) {
+        return null;
+    }
 }
