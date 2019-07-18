@@ -9,5 +9,4 @@ import java.util.List;
 @Repository
 public interface ParkingLotRepository extends JpaRepository<ParkingLot, String> {
     List<ParkingLot> findAllByName(String name);
-    
 }

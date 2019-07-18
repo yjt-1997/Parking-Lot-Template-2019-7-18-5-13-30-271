@@ -55,8 +55,7 @@ public class ParkingLotControllerTest {
         ParkingLot parkingLot4 = new ParkingLot("P004", 100, "香洲区");
 
         parkingLotRepository.saveAll(Arrays.asList(parkingLot1, parkingLot2, parkingLot3, parkingLot4));
-        Pageable page = PageRequest.of(1, 15);
-        Page<ParkingLot> fetchLots = parkingLotRepository.findAll(page);
+        Page<ParkingLot> fetchLots = parkingLotRepository.findAll(PageRequest.of(0, 15));
 
         assertNotNull(fetchLots);
         assertEquals(fetchLots.getTotalElements(), 4);
