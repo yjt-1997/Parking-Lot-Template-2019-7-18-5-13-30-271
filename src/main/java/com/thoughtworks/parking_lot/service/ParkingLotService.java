@@ -38,4 +38,8 @@ public class ParkingLotService {
     public ParkingLot update(ParkingLot parkingLot) {
         return parkingLotRepository.save(parkingLot);
     }
+
+    public void fetchCar(String carNumber) {
+
+    }
 }

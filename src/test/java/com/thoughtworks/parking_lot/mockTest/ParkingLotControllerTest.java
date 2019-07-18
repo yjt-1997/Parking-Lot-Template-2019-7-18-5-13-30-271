@@ -96,4 +96,11 @@ public class ParkingLotControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("P001")));
     }
+
+    @Test
+    void should_fetch_car_given_car_number() throws Exception {
+        mvc.perform(put("/parkinglots/cars/P001"))
+                .andExpect(status().isOk());
+        verify(parkingLotService).fetchCar(anyString());
+    }
 }
