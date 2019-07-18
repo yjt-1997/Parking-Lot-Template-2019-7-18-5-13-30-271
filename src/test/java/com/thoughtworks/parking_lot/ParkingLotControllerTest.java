@@ -18,8 +18,7 @@ import java.util.Arrays;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.ArgumentMatchers.anyList;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -53,18 +52,21 @@ public class ParkingLotControllerTest {
     void should_delte_parking_lot_given_parking_lot_name() throws Exception {
         ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
 
-        mvc.perform(delete("/parkinglots/P001"))
+        mvc.perform(delete("/parkinglots")
+                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .content(new ObjectMapper().writeValueAsString(parkingLot)))
                 .andExpect(status().isOk());
-        verify(parkingLotService).deleteByName("P001");
+        verify(parkingLotService).delete(ArgumentMatchers.any());
     }
 
     @Test
     void should_list_parking_lots() throws Exception {
         ParkingLot parkingLot = new ParkingLot("P001", 100, "香洲区");
 
-        when(parkingLotService.list()).thenReturn(Arrays.asList(parkingLot, parkingLot, parkingLot));
+        when(parkingLotService.list(anyInt())).thenReturn(Arrays.asList(parkingLot, parkingLot, parkingLot));
 
-        mvc.perform(get("/parkinglots"))
+        mvc.perform(get("/parkinglots?page=1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)));
     }

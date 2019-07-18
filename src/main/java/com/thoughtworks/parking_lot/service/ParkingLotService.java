@@ -1,6 +1,8 @@
 package com.thoughtworks.parking_lot.service;
 
+import com.thoughtworks.parking_lot.dao.ParkingLotRepository;
 import com.thoughtworks.parking_lot.entity.ParkingLot;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,23 +10,32 @@ import java.util.List;
 @Service
 public class ParkingLotService {
 
+    @Autowired
+    private ParkingLotRepository parkingLotRepository;
+
     public ParkingLot save(ParkingLot parkingLot) {
-        return null;
+        return parkingLotRepository.save(parkingLot);
     }
 
-    public void deleteByName(String name) {
-
+    public void delete(ParkingLot parkingLot) {
+        parkingLotRepository.delete(parkingLot);
     }
 
-    public List<ParkingLot> list() {
-        return null;
+    /**
+     * 还未实现分页，等待修改
+     *
+     * @return
+     */
+    public List<ParkingLot> list(int page) {
+        return parkingLotRepository.findAll();
     }
 
     public ParkingLot findByName(String name) {
-        return null;
+        List<ParkingLot> findResult = parkingLotRepository.findAllByName(name);
+        return findResult == null ? null : findResult.get(0);
     }
 
     public ParkingLot update(ParkingLot parkingLot) {
-        return null;
+        return parkingLotRepository.save(parkingLot);
     }
 }

@@ -20,14 +20,14 @@ public class ParkingLotController {
         return ResponseEntity.status(HttpStatus.CREATED).body(parkingLotService.save(parkingLot));
     }
 
-    @DeleteMapping("/parkinglots/{name}")
-    public void deleteByName(@PathVariable String name) {
-        parkingLotService.deleteByName(name);
+    @DeleteMapping("/parkinglots")
+    public void deleteByName(@RequestBody ParkingLot ParkingLot) {
+        parkingLotService.delete(ParkingLot);
     }
 
-    @GetMapping("/parkinglots")
-    public ResponseEntity<List<ParkingLot>> list() {
-        return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.list());
+    @GetMapping(value = "/parkinglots", params = {"page"})
+    public ResponseEntity<List<ParkingLot>> list(@RequestParam int page) {
+        return ResponseEntity.status(HttpStatus.OK).body(parkingLotService.list(page));
     }
 
     @GetMapping("/parkinglots/{name}")
