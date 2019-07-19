@@ -19,6 +19,9 @@ public class ParkingOrder {
     @Column(name = "order_status")
     private boolean orderStatus;
 
+    @Transient
+    private String lotName;
+
     public ParkingOrder() {
     }
 
@@ -60,5 +63,13 @@ public class ParkingOrder {
 
     public void setOrderStatus(boolean orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public String getLotName() {
+        return lotName;
+    }
+
+    public void setLotName(String lotName) {
+        this.lotName = lotName;
     }
 }
